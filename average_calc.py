@@ -6,7 +6,7 @@
 # it then calculates the average of 10 random generated numbers
 
 import random
-
+import constants
 
 def main():
     # set num_of_lists to an empty list
@@ -15,8 +15,8 @@ def main():
     sum = 0
 
     # For statement to loop back if the counter is between 0 and 9
-    for counter in range(10):
-        random_num = random.randint(0, 100)
+    for counter in range(constants.MAX):
+        random_num = random.randint(constants.MIN_NUM, constants.MAX_NUM)
         nums_of_list.append(random_num)
         print("{} added to list at index {}".format(random_num, counter))
 
